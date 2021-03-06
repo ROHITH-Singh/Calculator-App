@@ -1,6 +1,9 @@
 # Calculator App
  
-
+<style> div.image123 {
+    display: inline-block;
+ }
+ </style>
  
 </div> 
 <div class="image123">
