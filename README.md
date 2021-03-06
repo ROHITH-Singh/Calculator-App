@@ -9,5 +9,5 @@
     <div class="imgContainer">
         <img class="middle-img" src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_light.jpg" height="750" width="50%"/>
        
-    </div>
+
 
