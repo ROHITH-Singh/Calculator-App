@@ -1,3 +1,3 @@
 # Calculator App
  
-<img src="https://www.jiocloud.com/s/?t=b845389aaa794f8c837354">
+<img src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_dark.jpg">
