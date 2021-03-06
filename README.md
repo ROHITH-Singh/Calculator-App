@@ -1,20 +1,16 @@
 # Calculator App
  
 
- <div class="row" style="display:flex">
-  <div class="column" style="flex: 33.33%">
-    <img src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_light.jpg"  style="width:100%">
-  </div>
-  <div class="column">
-    <img src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_dark.jpg"  style="width:100%">
-  </div>
  
 </div> 
-.row {
-  ;
-}
+<div class="image123">
+    <div class="imgContainer" style=" float:left">
+        <img src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_dark.jpg" height="200" width="200"/>
+        <p>This is image 1</p>
+    </div>
+    <div class="imgContainer">
+        <img class="middle-img" src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_light.jpg" height="200" width="200"/>
+        <p>This is image 2</p>
+    </div>
+</div>
 
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
