@@ -4,7 +4,7 @@
  
 </div> 
 <div class="image123">
-    <div class="imgContainer" style=" float:left">
+    <div class="imgContainer" style="float:left">
         <img src="https://github.com/ROHITH-Singh/Calculator-App/blob/main/Calci_dark.jpg" height="200" width="200"/>
         <p>This is image 1</p>
     </div>
