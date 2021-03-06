@@ -1,6 +1,7 @@
 import 'package:Calculator/widgets/CalButton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:math_expressions/math_expressions.dart';
 
 void main() {
   runApp(MyApp());
@@ -75,9 +76,13 @@ class _DarkLightThemeState extends State<DarkLightTheme> {
   }
 
   void evaluate(String text) {
+    Parser p = Parser();
+    Expression exp = p.parse(_expression);
+    ContextModel cm = ContextModel();
+    double eval = exp.evaluate(EvaluationType.REAL, cm);
     setState(() {
       _history = _expression;
-      _expression = 'solved';
+      _expression = eval.toString();
     });
   }
 
@@ -97,14 +102,14 @@ class _DarkLightThemeState extends State<DarkLightTheme> {
                 padding: EdgeInsets.all(12),
                 child: Text(
                   _history,
-                  style: GoogleFonts.rubik(textStyle: TextStyle(fontSize: 48)),
+                  style: GoogleFonts.rubik(textStyle: TextStyle(fontSize: 30)),
                 )),
             Container(
                 alignment: Alignment(1, 1),
                 padding: EdgeInsets.all(12),
                 child: Text(
                   _expression,
-                  style: GoogleFonts.rubik(textStyle: TextStyle(fontSize: 48)),
+                  style: GoogleFonts.rubik(textStyle: TextStyle(fontSize: 40)),
                 )),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -169,7 +174,7 @@ class _DarkLightThemeState extends State<DarkLightTheme> {
                   callback: numclick,
                 ),
                 CalButton(
-                  text: "x",
+                  text: "*",
                   fillColor: Colors.grey,
                   textColor: Color(0XFF000000),
                   textsize: 18,
@@ -282,7 +287,7 @@ class _DarkLightThemeState extends State<DarkLightTheme> {
                   textColor: Color(0XFF000000),
                   textsize: 30,
                   x: FontWeight.bold,
-                  callback: numclick,
+                  callback: evaluate,
                 ),
               ],
             ),
